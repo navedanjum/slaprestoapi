@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Records</title>
+</head>
+<body>
+<h1>Records</h1>
+<table border="1">
+	<thead>
+	<tr>
+		<th th:each="column : ${columns}" th:text="${column}"></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr th:each="record : ${records}">
+		<td th:each="column : ${columns}" th:text="${record[column]}"></td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>
